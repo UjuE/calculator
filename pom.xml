@@ -28,7 +28,10 @@
                 <groupId>org.pitest</groupId>
                 <artifactId>pitest-maven</artifactId>
                 <version>1.5.2</version>
+
                 <configuration>
+                    <!-- This is here to ensure that the mutationCoverage goal fails when
+                     less than 95% of mutations go undetected -->
                     <mutationThreshold>95</mutationThreshold>
                 </configuration>
             </plugin>
